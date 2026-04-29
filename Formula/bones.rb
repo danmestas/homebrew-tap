@@ -5,21 +5,21 @@
 class Bones < Formula
   desc "Unified CLI for the bones agent-infrastructure substrate (workspace, orchestrator, tasks)."
   homepage "https://github.com/danmestas/bones"
-  version "0.1.1"
+  version "0.1.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danmestas/bones/releases/download/v0.1.1/bones_0.1.1_darwin_x86_64.tar.gz"
-      sha256 "c8a55790a617cb1538f074cf80342c01c0bff62c8fef23a63b8a4e598d91505c"
+      url "https://github.com/danmestas/bones/releases/download/v0.1.2/bones_0.1.2_darwin_x86_64.tar.gz"
+      sha256 "2348794de8b5ca489395a6a6c8ca6028efb01ffc3a896d19ba33e8293f8e3073"
 
       define_method(:install) do
         bin.install "bones"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danmestas/bones/releases/download/v0.1.1/bones_0.1.1_darwin_arm64.tar.gz"
-      sha256 "1b041a72b902f1ab4c3a8b92a936730365063d5ed096266cda5d8cae686a34c8"
+      url "https://github.com/danmestas/bones/releases/download/v0.1.2/bones_0.1.2_darwin_arm64.tar.gz"
+      sha256 "b82c658a3fa5cbcbfed12c8139762a0c5fb26618ef1f30a8e8e361fc8526d4c7"
 
       define_method(:install) do
         bin.install "bones"
@@ -29,15 +29,15 @@ class Bones < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danmestas/bones/releases/download/v0.1.1/bones_0.1.1_linux_x86_64.tar.gz"
-      sha256 "600c989e5a9a53471e69d71427310d4e6a04f30900edcd6e317ac330474aec23"
+      url "https://github.com/danmestas/bones/releases/download/v0.1.2/bones_0.1.2_linux_x86_64.tar.gz"
+      sha256 "792a5d280504f1d30186578a043502be0027bf951592224372e9b999f911a5a6"
       define_method(:install) do
         bin.install "bones"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danmestas/bones/releases/download/v0.1.1/bones_0.1.1_linux_arm64.tar.gz"
-      sha256 "f83bb83c24a1a4b6cbbdb7d936a737a768ae4b96a5d1a2860db2f45ec5165a24"
+      url "https://github.com/danmestas/bones/releases/download/v0.1.2/bones_0.1.2_linux_arm64.tar.gz"
+      sha256 "b904fbaa2d3dfc829e04bbeaa6cb190daea0979d1da3a0152a3778285416847b"
       define_method(:install) do
         bin.install "bones"
       end
