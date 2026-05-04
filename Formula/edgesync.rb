@@ -5,21 +5,21 @@
 class Edgesync < Formula
   desc "Sync engine for distributed teams: NATS messaging or peer-to-peer Fossil sync."
   homepage "https://github.com/danmestas/EdgeSync"
-  version "0.0.8"
+  version "0.0.9"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danmestas/EdgeSync/releases/download/v0.0.8/EdgeSync_0.0.8_darwin_x86_64.tar.gz"
-      sha256 "0613d4c6769e2acb8f7467e2b2526bd2c69f744a3a926ba979e64e9eb6ecd48b"
+      url "https://github.com/danmestas/EdgeSync/releases/download/v0.0.9/EdgeSync_0.0.9_darwin_x86_64.tar.gz"
+      sha256 "181a97b60279a414b8afe8085f9849f01e03146e5542b0bfedb714a9b8c8cdef"
 
       define_method(:install) do
         bin.install "edgesync"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danmestas/EdgeSync/releases/download/v0.0.8/EdgeSync_0.0.8_darwin_arm64.tar.gz"
-      sha256 "8eefd1916d74e66378badf20da91a4ebfe060cbc420143cb67eb10acc81484af"
+      url "https://github.com/danmestas/EdgeSync/releases/download/v0.0.9/EdgeSync_0.0.9_darwin_arm64.tar.gz"
+      sha256 "8dbda530e081af94dc3bd58a7090dce1896eaf2ced4437b42bd62f955e2e0fc8"
 
       define_method(:install) do
         bin.install "edgesync"
@@ -29,15 +29,15 @@ class Edgesync < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danmestas/EdgeSync/releases/download/v0.0.8/EdgeSync_0.0.8_linux_x86_64.tar.gz"
-      sha256 "eb916739ece031f41c91050421314e12e8517664b05a8b40dc088634d33fc4b9"
+      url "https://github.com/danmestas/EdgeSync/releases/download/v0.0.9/EdgeSync_0.0.9_linux_x86_64.tar.gz"
+      sha256 "cf863a12b0441737a8bfab9df011dd36224300d329c37ff6c65355856cac7c95"
       define_method(:install) do
         bin.install "edgesync"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danmestas/EdgeSync/releases/download/v0.0.8/EdgeSync_0.0.8_linux_arm64.tar.gz"
-      sha256 "ff36b4700a6a17888dc8e32434dc45072e082a3ad4d0d0ce1d09f04a4322ed90"
+      url "https://github.com/danmestas/EdgeSync/releases/download/v0.0.9/EdgeSync_0.0.9_linux_arm64.tar.gz"
+      sha256 "e39f0e10968b803e1d6529ce94299a03cd63882fbbd391f53b25f8c7d85ad8c5"
       define_method(:install) do
         bin.install "edgesync"
       end
