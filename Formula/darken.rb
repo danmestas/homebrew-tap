@@ -5,21 +5,21 @@
 class Darken < Formula
   desc "darken — orchestration substrate CLI"
   homepage "https://github.com/danmestas/darken"
-  version "0.4.1"
+  version "0.4.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danmestas/darken/releases/download/v0.4.1/darken_0.4.1_darwin_amd64.tar.gz"
-      sha256 "5ab0d9b9918fd0a7137c9108b409d581322da92f4ffe7c4144ad13e25e599d36"
+      url "https://github.com/danmestas/darken/releases/download/v0.4.2/darken_0.4.2_darwin_amd64.tar.gz"
+      sha256 "4717b142693ff542ea9c6b90a4d2055113c8621b849974db9f7830e5de95d8cf"
 
       define_method(:install) do
         bin.install "darken"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danmestas/darken/releases/download/v0.4.1/darken_0.4.1_darwin_arm64.tar.gz"
-      sha256 "ed65d20a2fcede100fa9a5b73c75efe574bcfa354ccc12b0b15ac5504b324695"
+      url "https://github.com/danmestas/darken/releases/download/v0.4.2/darken_0.4.2_darwin_arm64.tar.gz"
+      sha256 "ae9f003f0e0352eea25edcf26ff72070445b61598178c1f8e1fc325de919037a"
 
       define_method(:install) do
         bin.install "darken"
@@ -29,15 +29,15 @@ class Darken < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danmestas/darken/releases/download/v0.4.1/darken_0.4.1_linux_amd64.tar.gz"
-      sha256 "2f644ac79d669373329201aed964aaf98c1fb8468fcbfc6473d85eb65cc37bce"
+      url "https://github.com/danmestas/darken/releases/download/v0.4.2/darken_0.4.2_linux_amd64.tar.gz"
+      sha256 "f624c3128f0a5ac5e06b94ddb94b744c28440c090900f9d1f60245b6ecafaefe"
       define_method(:install) do
         bin.install "darken"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danmestas/darken/releases/download/v0.4.1/darken_0.4.1_linux_arm64.tar.gz"
-      sha256 "5279a15b791d29db59f489f30807f1d2f8b55f0043f9de8da8d1d06c40d32442"
+      url "https://github.com/danmestas/darken/releases/download/v0.4.2/darken_0.4.2_linux_arm64.tar.gz"
+      sha256 "00f4b8be56cab20d7534c3ab89d132f56bc8e6bfc3afc58a6c084c304033e338"
       define_method(:install) do
         bin.install "darken"
       end
