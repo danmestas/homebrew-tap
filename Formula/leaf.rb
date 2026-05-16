@@ -5,21 +5,21 @@
 class Leaf < Formula
   desc "Leaf daemon: bridges a workspace to a NATS+Fossil hub. Spawned by bones."
   homepage "https://github.com/danmestas/EdgeSync"
-  version "0.0.17"
+  version "0.0.20"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/danmestas/EdgeSync/releases/download/v0.0.17/leaf_0.0.17_darwin_x86_64.tar.gz"
-      sha256 "3f0d4891120e2afc27d5338564adb45254703361a110c20a9aa02d0496c64fab"
+      url "https://github.com/danmestas/EdgeSync/releases/download/v0.0.20/leaf_0.0.20_darwin_x86_64.tar.gz"
+      sha256 "ea13db845967b083e0df1aecc487907f56acf50c30011dc47de991a28bf2e66d"
 
       define_method(:install) do
         bin.install "leaf"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/danmestas/EdgeSync/releases/download/v0.0.17/leaf_0.0.17_darwin_arm64.tar.gz"
-      sha256 "b6409c04d929dfb12105bb431c1bc346abe5e4e8fd950062725b7085fa081897"
+      url "https://github.com/danmestas/EdgeSync/releases/download/v0.0.20/leaf_0.0.20_darwin_arm64.tar.gz"
+      sha256 "b9b47af99b16d5395c88948c36d5d6a217c07e25442e63569421127df7861fa7"
 
       define_method(:install) do
         bin.install "leaf"
@@ -29,15 +29,15 @@ class Leaf < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danmestas/EdgeSync/releases/download/v0.0.17/leaf_0.0.17_linux_x86_64.tar.gz"
-      sha256 "5897144cf8959300038197644203b8f707028bcc262fc158689f5cec675b9ef9"
+      url "https://github.com/danmestas/EdgeSync/releases/download/v0.0.20/leaf_0.0.20_linux_x86_64.tar.gz"
+      sha256 "348656ab6f5ef8a93ed8dd5c72946b595f4732cb59852c83e0149884f00a8d2e"
       define_method(:install) do
         bin.install "leaf"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/danmestas/EdgeSync/releases/download/v0.0.17/leaf_0.0.17_linux_arm64.tar.gz"
-      sha256 "5afb84ec55a06ca084b07e90a7bb897ff6dbd2bef7635e3d444718a2be34d5fe"
+      url "https://github.com/danmestas/EdgeSync/releases/download/v0.0.20/leaf_0.0.20_linux_arm64.tar.gz"
+      sha256 "3e6d377ee8394626d5e97944a42708b2f526cb573663cb7ab01ce4c09486bbbe"
       define_method(:install) do
         bin.install "leaf"
       end
